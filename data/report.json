@@ -47,7 +47,7 @@
       "product_variants",
       "products"
     ],
-    "logic": "Varianta je bud prime product_code ve tvaru /dd, nebo variant_code z product_variants pro polozky, kde se suffix v objednavce neuklada primo do product_code. Z reportu jsou zamerne vyrazeny vsechny varianty koncici na /01."
+    "logic": "Varianta je bud prime product_code ve tvaru /dd, nebo variant_code z product_variants pro polozky, kde se suffix v objednavce neuklada primo do product_code. Z reportu jsou zamerne vyrazeny vsechny varianty koncici na /01 a take kategorie stiny, kartacky na zuby, pudry, tuzky na oci, panske spodni pradlo a ovocne balzamy."
   },
   "annual": [
     {
@@ -58,7 +58,7 @@
         "sharePct": 3.19,
         "skuCount": 41,
         "baseCount": 19,
-        "definitionShort": "Varianty /dd mapovane i pres product_variants.variant_code, ale bez suffixu /01."
+        "definitionShort": "Varianty /dd mapovane i pres product_variants.variant_code, bez /01 a bez vybranych kategorii."
       },
       "months": [
         {
@@ -1673,7 +1673,7 @@
         "sharePct": 2.86,
         "skuCount": 22,
         "baseCount": 12,
-        "definitionShort": "Varianty /dd mapovane i pres product_variants.variant_code, ale bez suffixu /01."
+        "definitionShort": "Varianty /dd mapovane i pres product_variants.variant_code, bez /01 a bez vybranych kategorii."
       },
       "months": [
         {
