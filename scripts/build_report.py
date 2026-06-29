@@ -5,6 +5,7 @@ import csv
 import json
 import shlex
 import subprocess
+import unicodedata
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -35,6 +36,15 @@ MONTH_NAMES = {
     12: "prosinec",
 }
 EXCLUDED_SUFFIXES = {"/01"}
+EXCLUDED_TITLE_PHRASES = (
+    "ocni stiny",
+    "zubni kartacek",
+    "pudr",
+    "tuzka na oci",
+    "tuzka na rty a oci",
+    "panske spodni pradlo",
+    "ovocny balzam",
+)
 REPORT_AS_OF = datetime.fromisoformat("2026-06-29T18:05:25+02:00")
 
 
@@ -104,6 +114,10 @@ def normalize_label(value: str) -> str:
     )
 
 
+def normalize_text(value: str) -> str:
+    return unicodedata.normalize("NFKD", value or "").encode("ascii", "ignore").decode("ascii").lower()
+
+
 def build_title(product_title: str, variant_title: str, sku: str) -> str:
     product_title = (product_title or "").strip()
     variant_title = normalize_label(variant_title or "")
@@ -119,6 +133,14 @@ def build_title(product_title: str, variant_title: str, sku: str) -> str:
 
 def is_excluded_variant(variant_code: str) -> bool:
     return any(variant_code.endswith(suffix) for suffix in EXCLUDED_SUFFIXES)
+
+
+def is_excluded_title(product_title: str, variant_title: str, variant_code: str) -> bool:
+    text = " | ".join(
+        part for part in [product_title, variant_title, build_title(product_title, variant_title, variant_code)] if part
+    )
+    normalized = normalize_text(text)
+    return any(phrase in normalized for phrase in EXCLUDED_TITLE_PHRASES)
 
 
 def fetch_variant_rows() -> dict[int, dict[str, VariantSku]]:
@@ -147,6 +169,8 @@ def fetch_variant_rows() -> dict[int, dict[str, VariantSku]]:
     variants_by_year = {year: {} for year in REPORT_YEARS}
     for variant_code, raw_product_code, variant_title, product_title, month, quantity in rows:
         if is_excluded_variant(variant_code):
+            continue
+        if is_excluded_title(product_title, variant_title, variant_code):
             continue
         year = int(month[:4])
         if year not in variants_by_year:
