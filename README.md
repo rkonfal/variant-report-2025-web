@@ -2,6 +2,10 @@
 
 Statický webový report nad prodeji variantních SKU za rok 2025.
 
+## Live
+
+https://rkonfal.github.io/variant-report-2025-web/
+
 ## Zdroj dat
 
 - `reporting-v2/data/current/ordering_sales_history.json`
