@@ -84,6 +84,7 @@ function renderTopSkus(topSkus) {
       <td><strong>${row.sku}</strong></td>
       <td>${row.title || '<span class="muted">bez názvu</span>'}</td>
       <td>${formatInt(row.total)}</td>
+      <td>${formatInt(row.equivalentTotal)}</td>
     </tr>
   `).join("");
 }
@@ -126,6 +127,7 @@ function renderBaseProducts(baseProducts) {
       <td>${row.variantSkus.map((sku) => `<span class="variant-pill">${sku}</span>`).join("")}</td>
       <td>${formatInt(row.variantSkuCount)}</td>
       <td>${formatInt(row.total)}</td>
+      <td>${formatInt(row.equivalentTotal)}</td>
     </tr>
   `).join("");
 }
@@ -139,6 +141,7 @@ function renderSkuRows(skus, filter = "") {
 
   document.querySelector("#all-skus-body").innerHTML = rows.map((row) => {
     const averageValue = monthlyAverage(row.months);
+    const equivalentAverageValue = averageValue * (row.packSize || 1);
     return `
       <tr>
         <td><strong>${row.sku}</strong></td>
@@ -146,6 +149,7 @@ function renderSkuRows(skus, filter = "") {
         <td>${row.baseSku}</td>
         <td>${formatInt(row.total)}</td>
         <td>${formatInt(averageValue)} ks</td>
+        <td>${formatInt(equivalentAverageValue)} ks</td>
       </tr>
     `;
   }).join("");

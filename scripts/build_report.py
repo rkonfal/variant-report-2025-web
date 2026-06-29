@@ -68,6 +68,14 @@ class VariantSku:
     def total(self) -> float:
         return sum(self.months.values())
 
+    @property
+    def pack_size(self) -> int:
+        return extract_pack_size(self.sku)
+
+    @property
+    def equivalent_total(self) -> float:
+        return self.total * self.pack_size
+
 
 def months_for_year(year: int) -> list[str]:
     if year > REPORT_AS_OF.year:
@@ -226,6 +234,15 @@ def month_dict(values: dict[str, float], year: int) -> dict[str, int]:
     return {month: int(round(values.get(month, 0))) for month in months_for_year(year)}
 
 
+def extract_pack_size(sku: str) -> int:
+    suffix = sku.rsplit("/", 1)[-1]
+    try:
+        size = int(suffix)
+    except ValueError:
+        return 1
+    return size if size > 0 else 1
+
+
 def build_year_report(year: int, variants: dict[str, VariantSku], all_units_by_month: dict[str, float]) -> dict:
     year_months = months_for_year(year)
     month_labels = month_labels_for_year(year)
@@ -259,8 +276,10 @@ def build_year_report(year: int, variants: dict[str, VariantSku], all_units_by_m
                 "sku": sku.sku,
                 "title": sku.title,
                 "baseSku": sku.base_sku,
+                "packSize": sku.pack_size,
                 "months": month_dict(sku.months, year),
                 "total": int(round(sku.total)),
+                "equivalentTotal": int(round(sku.equivalent_total)),
             }
         )
     skus_payload.sort(key=lambda row: (-row["total"], row["sku"]))
@@ -268,12 +287,14 @@ def build_year_report(year: int, variants: dict[str, VariantSku], all_units_by_m
     base_products_payload = []
     for base_sku, base_skus in base_groups.items():
         base_total = int(round(sum(item.total for item in base_skus)))
+        equivalent_total = int(round(sum(item.equivalent_total for item in base_skus)))
         base_products_payload.append(
             {
                 "baseSku": base_sku,
                 "variantSkus": [item.sku for item in sorted(base_skus, key=lambda item: item.sku)],
                 "variantSkuCount": len(base_skus),
                 "total": base_total,
+                "equivalentTotal": equivalent_total,
                 "months": month_dict(
                     {
                         month: sum(item.months.get(month, 0) for item in base_skus)
@@ -366,15 +387,22 @@ def export_year_files(year_report: dict) -> None:
     )
     write_csv(
         EXPORTS_DIR / f"varianty_{year}_po_sku_mesice.csv",
-        ["sku", "title", *year_months, f"total_{year}"],
+        ["sku", "title", "pack_size", *year_months, f"total_{year}", f"equivalent_total_{year}"],
         [
-            [row["sku"], row["title"], *[row["months"][month] for month in year_months], row["total"]]
+            [
+                row["sku"],
+                row["title"],
+                row["packSize"],
+                *[row["months"][month] for month in year_months],
+                row["total"],
+                row["equivalentTotal"],
+            ]
             for row in year_report["skus"]
         ],
     )
     write_csv(
         EXPORTS_DIR / f"varianty_{year}_po_zakladnim_produktu.csv",
-        ["base_sku", "variant_sku_count", "variant_skus", *year_months, f"total_{year}"],
+        ["base_sku", "variant_sku_count", "variant_skus", *year_months, f"total_{year}", f"equivalent_total_{year}"],
         [
             [
                 row["baseSku"],
@@ -382,6 +410,7 @@ def export_year_files(year_report: dict) -> None:
                 ",".join(row["variantSkus"]),
                 *[row["months"][month] for month in year_months],
                 row["total"],
+                row["equivalentTotal"],
             ]
             for row in year_report["baseProducts"]
         ],
@@ -422,12 +451,12 @@ def export_markdown(report: dict) -> None:
                 "",
                 f"### Top variantni SKU za {year}",
                 "",
-                "| SKU | nazev | kusy |",
-                "| --- | --- | ---: |",
+                "| SKU | nazev | kusy | ks zakladu |",
+                "| --- | --- | ---: | ---: |",
             ]
         )
         for row in year_report["topSkus"]:
-            markdown.append(f"| `{row['sku']}` | {row['title']} | {row['total']} |")
+            markdown.append(f"| `{row['sku']}` | {row['title']} | {row['total']} | {row['equivalentTotal']} |")
         markdown.append("")
 
     markdown.extend(

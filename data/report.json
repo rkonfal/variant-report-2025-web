@@ -163,6 +163,7 @@
           "sku": "63601/05",
           "title": "Denní vložka Energie života - 5 ks",
           "baseSku": "63601",
+          "packSize": 5,
           "months": {
             "2025-01": 778,
             "2025-02": 1049,
@@ -177,12 +178,14 @@
             "2025-11": 547,
             "2025-12": 270
           },
-          "total": 6327
+          "total": 6327,
+          "equivalentTotal": 31635
         },
         {
           "sku": "60145/05",
           "title": "Denní hygienická vložka „Jemná péče“ - 5 ks",
           "baseSku": "60145",
+          "packSize": 5,
           "months": {
             "2025-01": 424,
             "2025-02": 494,
@@ -197,12 +200,14 @@
             "2025-11": 478,
             "2025-12": 277
           },
-          "total": 4998
+          "total": 4998,
+          "equivalentTotal": 24990
         },
         {
           "sku": "30118/03",
           "title": "Kosmetická fytonáplast Wutong - 3 ks",
           "baseSku": "30118",
+          "packSize": 3,
           "months": {
             "2025-01": 463,
             "2025-02": 579,
@@ -217,12 +222,14 @@
             "2025-11": 720,
             "2025-12": 273
           },
-          "total": 4872
+          "total": 4872,
+          "equivalentTotal": 14616
         },
         {
           "sku": "63601/10",
           "title": "Denní vložka Energie života - 10 ks",
           "baseSku": "63601",
+          "packSize": 10,
           "months": {
             "2025-01": 551,
             "2025-02": 306,
@@ -237,12 +244,14 @@
             "2025-11": 549,
             "2025-12": 97
           },
-          "total": 3935
+          "total": 3935,
+          "equivalentTotal": 39350
         },
         {
           "sku": "41105/03",
           "title": "Regenerační krém na nohy s hadím olejem - 3 ks",
           "baseSku": "41105",
+          "packSize": 3,
           "months": {
             "2025-01": 355,
             "2025-02": 310,
@@ -257,12 +266,14 @@
             "2025-11": 387,
             "2025-12": 198
           },
-          "total": 3601
+          "total": 3601,
+          "equivalentTotal": 10803
         },
         {
           "sku": "30117/03",
           "title": "Kosmetická fytonáplast Jian Kang - 3 ks",
           "baseSku": "30117",
+          "packSize": 3,
           "months": {
             "2025-01": 174,
             "2025-02": 485,
@@ -277,12 +288,14 @@
             "2025-11": 630,
             "2025-12": 221
           },
-          "total": 3323
+          "total": 3323,
+          "equivalentTotal": 9969
         },
         {
           "sku": "41314/05",
           "title": "Náplast na nohy - 5 ks",
           "baseSku": "41314",
+          "packSize": 5,
           "months": {
             "2025-01": 438,
             "2025-02": 492,
@@ -297,12 +310,14 @@
             "2025-11": 407,
             "2025-12": 132
           },
-          "total": 3306
+          "total": 3306,
+          "equivalentTotal": 16530
         },
         {
           "sku": "30118/05",
           "title": "Kosmetická fytonáplast Wutong - 5 ks",
           "baseSku": "30118",
+          "packSize": 5,
           "months": {
             "2025-01": 291,
             "2025-02": 262,
@@ -317,12 +332,14 @@
             "2025-11": 497,
             "2025-12": 209
           },
-          "total": 3064
+          "total": 3064,
+          "equivalentTotal": 15320
         },
         {
           "sku": "60145/10",
           "title": "Denní hygienická vložka „Jemná péče“ - 10 ks",
           "baseSku": "60145",
+          "packSize": 10,
           "months": {
             "2025-01": 304,
             "2025-02": 310,
@@ -337,12 +354,14 @@
             "2025-11": 442,
             "2025-12": 134
           },
-          "total": 3049
+          "total": 3049,
+          "equivalentTotal": 30490
         },
         {
           "sku": "41105/05",
           "title": "Regenerační krém na nohy s hadím olejem - 5 ks",
           "baseSku": "41105",
+          "packSize": 5,
           "months": {
             "2025-01": 242,
             "2025-02": 225,
@@ -357,12 +376,14 @@
             "2025-11": 301,
             "2025-12": 154
           },
-          "total": 2367
+          "total": 2367,
+          "equivalentTotal": 11835
         },
         {
           "sku": "41328/05",
           "title": "Levandulová náplast na nohy - 5 ks",
           "baseSku": "41328",
+          "packSize": 5,
           "months": {
             "2025-01": 251,
             "2025-02": 421,
@@ -377,12 +398,14 @@
             "2025-11": 231,
             "2025-12": 94
           },
-          "total": 2230
+          "total": 2230,
+          "equivalentTotal": 11150
         },
         {
           "sku": "30117/05",
           "title": "Kosmetická fytonáplast Jian Kang - 5 ks",
           "baseSku": "30117",
+          "packSize": 5,
           "months": {
             "2025-01": 258,
             "2025-02": 10,
@@ -397,7 +420,8 @@
             "2025-11": 301,
             "2025-12": 151
           },
-          "total": 1863
+          "total": 1863,
+          "equivalentTotal": 9315
         }
       ],
       "baseProducts": [
@@ -410,6 +434,7 @@
           ],
           "variantSkuCount": 3,
           "total": 11435,
+          "equivalentTotal": 80369,
           "months": {
             "2025-01": 1329,
             "2025-02": 1355,
@@ -433,6 +458,7 @@
           ],
           "variantSkuCount": 2,
           "total": 8047,
+          "equivalentTotal": 55480,
           "months": {
             "2025-01": 728,
             "2025-02": 804,
@@ -456,6 +482,7 @@
           ],
           "variantSkuCount": 2,
           "total": 7936,
+          "equivalentTotal": 29936,
           "months": {
             "2025-01": 754,
             "2025-02": 841,
@@ -479,6 +506,7 @@
           ],
           "variantSkuCount": 2,
           "total": 5968,
+          "equivalentTotal": 22638,
           "months": {
             "2025-01": 597,
             "2025-02": 535,
@@ -502,6 +530,7 @@
           ],
           "variantSkuCount": 2,
           "total": 5186,
+          "equivalentTotal": 19284,
           "months": {
             "2025-01": 432,
             "2025-02": 495,
@@ -525,6 +554,7 @@
           ],
           "variantSkuCount": 2,
           "total": 4773,
+          "equivalentTotal": 31200,
           "months": {
             "2025-01": 577,
             "2025-02": 825,
@@ -549,6 +579,7 @@
           ],
           "variantSkuCount": 3,
           "total": 3481,
+          "equivalentTotal": 23648,
           "months": {
             "2025-01": 330,
             "2025-02": 633,
@@ -577,6 +608,7 @@
           ],
           "variantSkuCount": 7,
           "total": 3399,
+          "equivalentTotal": 38262,
           "months": {
             "2025-01": 211,
             "2025-02": 367,
@@ -600,6 +632,7 @@
           ],
           "variantSkuCount": 2,
           "total": 2788,
+          "equivalentTotal": 10370,
           "months": {
             "2025-01": 248,
             "2025-02": 236,
@@ -626,6 +659,7 @@
           ],
           "variantSkuCount": 5,
           "total": 2112,
+          "equivalentTotal": 10790,
           "months": {
             "2025-01": 128,
             "2025-02": 283,
@@ -648,6 +682,7 @@
           ],
           "variantSkuCount": 1,
           "total": 557,
+          "equivalentTotal": 557,
           "months": {
             "2025-01": 557,
             "2025-02": 0,
@@ -670,6 +705,7 @@
           ],
           "variantSkuCount": 1,
           "total": 201,
+          "equivalentTotal": 603,
           "months": {
             "2025-01": 0,
             "2025-02": 0,
@@ -692,6 +728,7 @@
           ],
           "variantSkuCount": 1,
           "total": 118,
+          "equivalentTotal": 236,
           "months": {
             "2025-01": 117,
             "2025-02": 1,
@@ -716,6 +753,7 @@
           ],
           "variantSkuCount": 3,
           "total": 77,
+          "equivalentTotal": 240,
           "months": {
             "2025-01": 24,
             "2025-02": 6,
@@ -738,6 +776,7 @@
           ],
           "variantSkuCount": 1,
           "total": 4,
+          "equivalentTotal": 28,
           "months": {
             "2025-01": 4,
             "2025-02": 0,
@@ -760,6 +799,7 @@
           ],
           "variantSkuCount": 1,
           "total": 1,
+          "equivalentTotal": 2,
           "months": {
             "2025-01": 1,
             "2025-02": 0,
@@ -782,6 +822,7 @@
           ],
           "variantSkuCount": 1,
           "total": 1,
+          "equivalentTotal": 2,
           "months": {
             "2025-01": 1,
             "2025-02": 0,
@@ -803,6 +844,7 @@
           "sku": "63601/05",
           "title": "Denní vložka Energie života - 5 ks",
           "baseSku": "63601",
+          "packSize": 5,
           "months": {
             "2025-01": 778,
             "2025-02": 1049,
@@ -817,12 +859,14 @@
             "2025-11": 547,
             "2025-12": 270
           },
-          "total": 6327
+          "total": 6327,
+          "equivalentTotal": 31635
         },
         {
           "sku": "60145/05",
           "title": "Denní hygienická vložka „Jemná péče“ - 5 ks",
           "baseSku": "60145",
+          "packSize": 5,
           "months": {
             "2025-01": 424,
             "2025-02": 494,
@@ -837,12 +881,14 @@
             "2025-11": 478,
             "2025-12": 277
           },
-          "total": 4998
+          "total": 4998,
+          "equivalentTotal": 24990
         },
         {
           "sku": "30118/03",
           "title": "Kosmetická fytonáplast Wutong - 3 ks",
           "baseSku": "30118",
+          "packSize": 3,
           "months": {
             "2025-01": 463,
             "2025-02": 579,
@@ -857,12 +903,14 @@
             "2025-11": 720,
             "2025-12": 273
           },
-          "total": 4872
+          "total": 4872,
+          "equivalentTotal": 14616
         },
         {
           "sku": "63601/10",
           "title": "Denní vložka Energie života - 10 ks",
           "baseSku": "63601",
+          "packSize": 10,
           "months": {
             "2025-01": 551,
             "2025-02": 306,
@@ -877,12 +925,14 @@
             "2025-11": 549,
             "2025-12": 97
           },
-          "total": 3935
+          "total": 3935,
+          "equivalentTotal": 39350
         },
         {
           "sku": "41105/03",
           "title": "Regenerační krém na nohy s hadím olejem - 3 ks",
           "baseSku": "41105",
+          "packSize": 3,
           "months": {
             "2025-01": 355,
             "2025-02": 310,
@@ -897,12 +947,14 @@
             "2025-11": 387,
             "2025-12": 198
           },
-          "total": 3601
+          "total": 3601,
+          "equivalentTotal": 10803
         },
         {
           "sku": "30117/03",
           "title": "Kosmetická fytonáplast Jian Kang - 3 ks",
           "baseSku": "30117",
+          "packSize": 3,
           "months": {
             "2025-01": 174,
             "2025-02": 485,
@@ -917,12 +969,14 @@
             "2025-11": 630,
             "2025-12": 221
           },
-          "total": 3323
+          "total": 3323,
+          "equivalentTotal": 9969
         },
         {
           "sku": "41314/05",
           "title": "Náplast na nohy - 5 ks",
           "baseSku": "41314",
+          "packSize": 5,
           "months": {
             "2025-01": 438,
             "2025-02": 492,
@@ -937,12 +991,14 @@
             "2025-11": 407,
             "2025-12": 132
           },
-          "total": 3306
+          "total": 3306,
+          "equivalentTotal": 16530
         },
         {
           "sku": "30118/05",
           "title": "Kosmetická fytonáplast Wutong - 5 ks",
           "baseSku": "30118",
+          "packSize": 5,
           "months": {
             "2025-01": 291,
             "2025-02": 262,
@@ -957,12 +1013,14 @@
             "2025-11": 497,
             "2025-12": 209
           },
-          "total": 3064
+          "total": 3064,
+          "equivalentTotal": 15320
         },
         {
           "sku": "60145/10",
           "title": "Denní hygienická vložka „Jemná péče“ - 10 ks",
           "baseSku": "60145",
+          "packSize": 10,
           "months": {
             "2025-01": 304,
             "2025-02": 310,
@@ -977,12 +1035,14 @@
             "2025-11": 442,
             "2025-12": 134
           },
-          "total": 3049
+          "total": 3049,
+          "equivalentTotal": 30490
         },
         {
           "sku": "41105/05",
           "title": "Regenerační krém na nohy s hadím olejem - 5 ks",
           "baseSku": "41105",
+          "packSize": 5,
           "months": {
             "2025-01": 242,
             "2025-02": 225,
@@ -997,12 +1057,14 @@
             "2025-11": 301,
             "2025-12": 154
           },
-          "total": 2367
+          "total": 2367,
+          "equivalentTotal": 11835
         },
         {
           "sku": "41328/05",
           "title": "Levandulová náplast na nohy - 5 ks",
           "baseSku": "41328",
+          "packSize": 5,
           "months": {
             "2025-01": 251,
             "2025-02": 421,
@@ -1017,12 +1079,14 @@
             "2025-11": 231,
             "2025-12": 94
           },
-          "total": 2230
+          "total": 2230,
+          "equivalentTotal": 11150
         },
         {
           "sku": "30117/05",
           "title": "Kosmetická fytonáplast Jian Kang - 5 ks",
           "baseSku": "30117",
+          "packSize": 5,
           "months": {
             "2025-01": 258,
             "2025-02": 10,
@@ -1037,12 +1101,14 @@
             "2025-11": 301,
             "2025-12": 151
           },
-          "total": 1863
+          "total": 1863,
+          "equivalentTotal": 9315
         },
         {
           "sku": "41106/03",
           "title": "Preventivní krém na nohy s hadím olejem - 3 ks",
           "baseSku": "41106",
+          "packSize": 3,
           "months": {
             "2025-01": 175,
             "2025-02": 165,
@@ -1057,12 +1123,14 @@
             "2025-11": 204,
             "2025-12": 93
           },
-          "total": 1785
+          "total": 1785,
+          "equivalentTotal": 5355
         },
         {
           "sku": "41314/10",
           "title": "Náplast na nohy - 10 ks",
           "baseSku": "41314",
+          "packSize": 10,
           "months": {
             "2025-01": 139,
             "2025-02": 333,
@@ -1077,12 +1145,14 @@
             "2025-11": 161,
             "2025-12": 60
           },
-          "total": 1467
+          "total": 1467,
+          "equivalentTotal": 14670
         },
         {
           "sku": "41328/10",
           "title": "Levandulová náplast na nohy - 10 ks",
           "baseSku": "41328",
+          "packSize": 10,
           "months": {
             "2025-01": 79,
             "2025-02": 212,
@@ -1097,12 +1167,14 @@
             "2025-11": 123,
             "2025-12": 39
           },
-          "total": 1247
+          "total": 1247,
+          "equivalentTotal": 12470
         },
         {
           "sku": "63601/08",
           "title": "Denní vložka Energie života - 8 ks",
           "baseSku": "63601",
+          "packSize": 8,
           "months": {
             "2025-01": 0,
             "2025-02": 0,
@@ -1117,12 +1189,14 @@
             "2025-11": 277,
             "2025-12": 170
           },
-          "total": 1173
+          "total": 1173,
+          "equivalentTotal": 9384
         },
         {
           "sku": "41106/05",
           "title": "Preventivní krém na nohy s hadím olejem - 5 ks",
           "baseSku": "41106",
+          "packSize": 5,
           "months": {
             "2025-01": 73,
             "2025-02": 71,
@@ -1137,12 +1211,14 @@
             "2025-11": 117,
             "2025-12": 65
           },
-          "total": 1003
+          "total": 1003,
+          "equivalentTotal": 5015
         },
         {
           "sku": "80409/12",
           "title": "Rtěnka - Odstín rtěnka 80409: Odstín 12",
           "baseSku": "80409",
+          "packSize": 12,
           "months": {
             "2025-01": 32,
             "2025-02": 62,
@@ -1157,12 +1233,14 @@
             "2025-11": 436,
             "2025-12": 0
           },
-          "total": 661
+          "total": 661,
+          "equivalentTotal": 7932
         },
         {
           "sku": "80409/10",
           "title": "Rtěnka - Odstín rtěnka 80409: Odstín 10",
           "baseSku": "80409",
+          "packSize": 10,
           "months": {
             "2025-01": 41,
             "2025-02": 62,
@@ -1177,12 +1255,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 657
+          "total": 657,
+          "equivalentTotal": 6570
         },
         {
           "sku": "80408/03",
           "title": "Rtěnka - Odstín rtěnka 80408: Odstín 03",
           "baseSku": "80408",
+          "packSize": 3,
           "months": {
             "2025-01": 44,
             "2025-02": 107,
@@ -1197,12 +1277,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 637
+          "total": 637,
+          "equivalentTotal": 1911
         },
         {
           "sku": "80909/00",
           "title": "DD Tonální korekční přípravek Cushion - Tonální přípravek Cushion: Světlý",
           "baseSku": "80909",
+          "packSize": 1,
           "months": {
             "2025-01": 557,
             "2025-02": 0,
@@ -1217,12 +1299,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 557
+          "total": 557,
+          "equivalentTotal": 557
         },
         {
           "sku": "80408/07",
           "title": "Rtěnka - Odstín rtěnka 80408: Odstín 07",
           "baseSku": "80408",
+          "packSize": 7,
           "months": {
             "2025-01": 21,
             "2025-02": 45,
@@ -1237,12 +1321,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 519
+          "total": 519,
+          "equivalentTotal": 3633
         },
         {
           "sku": "80409/11",
           "title": "Rtěnka - Odstín rtěnka 80409: Odstín 11",
           "baseSku": "80409",
+          "packSize": 11,
           "months": {
             "2025-01": 17,
             "2025-02": 32,
@@ -1257,12 +1343,14 @@
             "2025-11": 1,
             "2025-12": 0
           },
-          "total": 511
+          "total": 511,
+          "equivalentTotal": 5621
         },
         {
           "sku": "80409/13",
           "title": "Rtěnka - Odstín rtěnka 80409: Odstín 13",
           "baseSku": "80409",
+          "packSize": 13,
           "months": {
             "2025-01": 28,
             "2025-02": 45,
@@ -1277,12 +1365,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 507
+          "total": 507,
+          "equivalentTotal": 6591
         },
         {
           "sku": "80409/14",
           "title": "Rtěnka - Odstín rtěnka 80409: Odstín 14",
           "baseSku": "80409",
+          "packSize": 14,
           "months": {
             "2025-01": 26,
             "2025-02": 42,
@@ -1297,12 +1387,14 @@
             "2025-11": 66,
             "2025-12": 0
           },
-          "total": 485
+          "total": 485,
+          "equivalentTotal": 6790
         },
         {
           "sku": "80408/06",
           "title": "Rtěnka - Odstín rtěnka 80408: Odstín 06",
           "baseSku": "80408",
+          "packSize": 6,
           "months": {
             "2025-01": 33,
             "2025-02": 64,
@@ -1317,12 +1409,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 476
+          "total": 476,
+          "equivalentTotal": 2856
         },
         {
           "sku": "80408/05",
           "title": "Rtěnka - Odstín rtěnka 80408: Odstín 05",
           "baseSku": "80408",
+          "packSize": 5,
           "months": {
             "2025-01": 20,
             "2025-02": 67,
@@ -1337,12 +1431,14 @@
             "2025-11": 3,
             "2025-12": 0
           },
-          "total": 470
+          "total": 470,
+          "equivalentTotal": 2350
         },
         {
           "sku": "80409/08",
           "title": "Rtěnka - Odstín rtěnka 80409: Odstín 08",
           "baseSku": "80409",
+          "packSize": 8,
           "months": {
             "2025-01": 38,
             "2025-02": 77,
@@ -1357,12 +1453,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 444
+          "total": 444,
+          "equivalentTotal": 3552
         },
         {
           "sku": "57010/03",
           "title": "57010/03",
           "baseSku": "57010",
+          "packSize": 3,
           "months": {
             "2025-01": 0,
             "2025-02": 0,
@@ -1377,12 +1475,14 @@
             "2025-11": 36,
             "2025-12": 12
           },
-          "total": 201
+          "total": 201,
+          "equivalentTotal": 603
         },
         {
           "sku": "80409/09",
           "title": "Rtěnka - Odstín rtěnka 80409: Odstín 09",
           "baseSku": "80409",
+          "packSize": 9,
           "months": {
             "2025-01": 29,
             "2025-02": 47,
@@ -1397,12 +1497,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 134
+          "total": 134,
+          "equivalentTotal": 1206
         },
         {
           "sku": "30130/02",
           "title": "Ponožky s bodovou aplikací turmalínu - vel. 22",
           "baseSku": "30130",
+          "packSize": 2,
           "months": {
             "2025-01": 117,
             "2025-02": 1,
@@ -1417,12 +1519,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 118
+          "total": 118,
+          "equivalentTotal": 236
         },
         {
           "sku": "87009/03",
           "title": "Tónující BB základ na obličej - Odstín BB: 03",
           "baseSku": "87009",
+          "packSize": 3,
           "months": {
             "2025-01": 13,
             "2025-02": 6,
@@ -1437,12 +1541,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 66
+          "total": 66,
+          "equivalentTotal": 198
         },
         {
           "sku": "80408/04",
           "title": "Rtěnka - Odstín rtěnka 80408: Odstín 04",
           "baseSku": "80408",
+          "packSize": 4,
           "months": {
             "2025-01": 10,
             "2025-02": 0,
@@ -1457,12 +1563,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 10
+          "total": 10,
+          "equivalentTotal": 40
         },
         {
           "sku": "87009/04",
           "title": "Tónující BB základ na obličej - Odstín BB: 04",
           "baseSku": "87009",
+          "packSize": 4,
           "months": {
             "2025-01": 10,
             "2025-02": 0,
@@ -1477,12 +1585,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 10
+          "total": 10,
+          "equivalentTotal": 40
         },
         {
           "sku": "100642/07",
           "title": "Papírová dárková taška Coast of Azure tianDe",
           "baseSku": "100642",
+          "packSize": 7,
           "months": {
             "2025-01": 4,
             "2025-02": 0,
@@ -1497,12 +1607,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 4
+          "total": 4,
+          "equivalentTotal": 28
         },
         {
           "sku": "41328/07",
           "title": "Levandulová náplast na nohy po 7 ks",
           "baseSku": "41328",
+          "packSize": 7,
           "months": {
             "2025-01": 0,
             "2025-02": 0,
@@ -1517,12 +1629,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 4
+          "total": 4,
+          "equivalentTotal": 28
         },
         {
           "sku": "80906/02",
           "title": "Tužka na obočí - Tužka na obočí: 02 Graphite",
           "baseSku": "80906",
+          "packSize": 2,
           "months": {
             "2025-01": 1,
             "2025-02": 0,
@@ -1537,12 +1651,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 1
+          "total": 1,
+          "equivalentTotal": 2
         },
         {
           "sku": "87009/02",
           "title": "Tónující BB základ na obličej - Odstín BB: 02",
           "baseSku": "87009",
+          "packSize": 2,
           "months": {
             "2025-01": 1,
             "2025-02": 0,
@@ -1557,12 +1673,14 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 1
+          "total": 1,
+          "equivalentTotal": 2
         },
         {
           "sku": "90191/02",
           "title": "Beauty taštička (Oliva)",
           "baseSku": "90191",
+          "packSize": 2,
           "months": {
             "2025-01": 1,
             "2025-02": 0,
@@ -1577,15 +1695,16 @@
             "2025-11": 0,
             "2025-12": 0
           },
-          "total": 1
+          "total": 1,
+          "equivalentTotal": 2
         }
       ]
     },
     {
       "year": 2026,
       "summary": {
-        "variantUnits": 20607,
-        "allUnits": 741337,
+        "variantUnits": 20613,
+        "allUnits": 741597,
         "sharePct": 2.78,
         "skuCount": 19,
         "baseCount": 9,
@@ -1635,8 +1754,8 @@
         {
           "month": "2026-06",
           "label": "cerven",
-          "variantUnits": 2661,
-          "allUnits": 102116,
+          "variantUnits": 2667,
+          "allUnits": 102376,
           "sharePct": 2.61,
           "activeVariantSkus": 18
         }
@@ -1646,34 +1765,39 @@
           "sku": "60145/05",
           "title": "Denní hygienická vložka „Jemná péče“ - 5 ks",
           "baseSku": "60145",
+          "packSize": 5,
           "months": {
             "2026-01": 378,
             "2026-02": 407,
             "2026-03": 381,
             "2026-04": 364,
             "2026-05": 469,
-            "2026-06": 554
+            "2026-06": 557
           },
-          "total": 2553
+          "total": 2556,
+          "equivalentTotal": 12780
         },
         {
           "sku": "63601/05",
           "title": "Denní vložka Energie života - 5 ks",
           "baseSku": "63601",
+          "packSize": 5,
           "months": {
             "2026-01": 182,
             "2026-02": 292,
             "2026-03": 331,
             "2026-04": 293,
             "2026-05": 382,
-            "2026-06": 372
+            "2026-06": 373
           },
-          "total": 1852
+          "total": 1853,
+          "equivalentTotal": 9265
         },
         {
           "sku": "60145/10",
           "title": "Denní hygienická vložka „Jemná péče“ - 10 ks",
           "baseSku": "60145",
+          "packSize": 10,
           "months": {
             "2026-01": 346,
             "2026-02": 622,
@@ -1682,12 +1806,14 @@
             "2026-05": 155,
             "2026-06": 246
           },
-          "total": 1683
+          "total": 1683,
+          "equivalentTotal": 16830
         },
         {
           "sku": "30118/03",
           "title": "Kosmetická fytonáplast Wutong - 3 ks",
           "baseSku": "30118",
+          "packSize": 3,
           "months": {
             "2026-01": 300,
             "2026-02": 336,
@@ -1696,26 +1822,30 @@
             "2026-05": 203,
             "2026-06": 20
           },
-          "total": 1570
+          "total": 1570,
+          "equivalentTotal": 4710
         },
         {
           "sku": "41314/05",
           "title": "Náplast na nohy - 5 ks",
           "baseSku": "41314",
+          "packSize": 5,
           "months": {
             "2026-01": 198,
             "2026-02": 435,
             "2026-03": 252,
             "2026-04": 222,
             "2026-05": 188,
-            "2026-06": 142
+            "2026-06": 143
           },
-          "total": 1437
+          "total": 1438,
+          "equivalentTotal": 7190
         },
         {
           "sku": "63601/10",
           "title": "Denní vložka Energie života - 10 ks",
           "baseSku": "63601",
+          "packSize": 10,
           "months": {
             "2026-01": 50,
             "2026-02": 322,
@@ -1724,12 +1854,14 @@
             "2026-05": 221,
             "2026-06": 273
           },
-          "total": 1367
+          "total": 1367,
+          "equivalentTotal": 13670
         },
         {
           "sku": "41105/03",
           "title": "Regenerační krém na nohy s hadím olejem - 3 ks",
           "baseSku": "41105",
+          "packSize": 3,
           "months": {
             "2026-01": 185,
             "2026-02": 220,
@@ -1738,12 +1870,14 @@
             "2026-05": 196,
             "2026-06": 174
           },
-          "total": 1269
+          "total": 1269,
+          "equivalentTotal": 3807
         },
         {
           "sku": "30117/03",
           "title": "Kosmetická fytonáplast Jian Kang - 3 ks",
           "baseSku": "30117",
+          "packSize": 3,
           "months": {
             "2026-01": 41,
             "2026-02": 310,
@@ -1752,12 +1886,14 @@
             "2026-05": 191,
             "2026-06": 120
           },
-          "total": 1227
+          "total": 1227,
+          "equivalentTotal": 3681
         },
         {
           "sku": "30118/05",
           "title": "Kosmetická fytonáplast Wutong - 5 ks",
           "baseSku": "30118",
+          "packSize": 5,
           "months": {
             "2026-01": 174,
             "2026-02": 242,
@@ -1766,12 +1902,14 @@
             "2026-05": 153,
             "2026-06": 153
           },
-          "total": 1169
+          "total": 1169,
+          "equivalentTotal": 5845
         },
         {
           "sku": "41105/05",
           "title": "Regenerační krém na nohy s hadím olejem - 5 ks",
           "baseSku": "41105",
+          "packSize": 5,
           "months": {
             "2026-01": 166,
             "2026-02": 154,
@@ -1780,12 +1918,14 @@
             "2026-05": 179,
             "2026-06": 138
           },
-          "total": 991
+          "total": 991,
+          "equivalentTotal": 4955
         },
         {
           "sku": "41328/10",
           "title": "Levandulová náplast na nohy - 10 ks",
           "baseSku": "41328",
+          "packSize": 10,
           "months": {
             "2026-01": 67,
             "2026-02": 99,
@@ -1794,12 +1934,14 @@
             "2026-05": 268,
             "2026-06": 91
           },
-          "total": 834
+          "total": 834,
+          "equivalentTotal": 8340
         },
         {
           "sku": "30117/05",
           "title": "Kosmetická fytonáplast Jian Kang - 5 ks",
           "baseSku": "30117",
+          "packSize": 5,
           "months": {
             "2026-01": 199,
             "2026-02": 155,
@@ -1808,7 +1950,8 @@
             "2026-05": 103,
             "2026-06": 67
           },
-          "total": 829
+          "total": 829,
+          "equivalentTotal": 4145
         }
       ],
       "baseProducts": [
@@ -1819,14 +1962,15 @@
             "60145/10"
           ],
           "variantSkuCount": 2,
-          "total": 4236,
+          "total": 4239,
+          "equivalentTotal": 29610,
           "months": {
             "2026-01": 724,
             "2026-02": 1029,
             "2026-03": 564,
             "2026-04": 495,
             "2026-05": 624,
-            "2026-06": 800
+            "2026-06": 803
           }
         },
         {
@@ -1837,14 +1981,15 @@
             "63601/10"
           ],
           "variantSkuCount": 3,
-          "total": 3761,
+          "total": 3762,
+          "equivalentTotal": 27271,
           "months": {
             "2026-01": 518,
             "2026-02": 699,
             "2026-03": 652,
             "2026-04": 576,
             "2026-05": 637,
-            "2026-06": 679
+            "2026-06": 680
           }
         },
         {
@@ -1855,6 +2000,7 @@
           ],
           "variantSkuCount": 2,
           "total": 2739,
+          "equivalentTotal": 10555,
           "months": {
             "2026-01": 474,
             "2026-02": 578,
@@ -1872,6 +2018,7 @@
           ],
           "variantSkuCount": 2,
           "total": 2260,
+          "equivalentTotal": 8762,
           "months": {
             "2026-01": 351,
             "2026-02": 374,
@@ -1889,6 +2036,7 @@
           ],
           "variantSkuCount": 2,
           "total": 2056,
+          "equivalentTotal": 7826,
           "months": {
             "2026-01": 240,
             "2026-02": 465,
@@ -1905,14 +2053,15 @@
             "41314/10"
           ],
           "variantSkuCount": 2,
-          "total": 1994,
+          "total": 1995,
+          "equivalentTotal": 12760,
           "months": {
             "2026-01": 283,
             "2026-02": 573,
             "2026-03": 360,
             "2026-04": 317,
             "2026-05": 264,
-            "2026-06": 197
+            "2026-06": 198
           }
         },
         {
@@ -1924,6 +2073,7 @@
           ],
           "variantSkuCount": 3,
           "total": 1881,
+          "equivalentTotal": 14463,
           "months": {
             "2026-01": 196,
             "2026-02": 253,
@@ -1940,14 +2090,15 @@
             "41106/05"
           ],
           "variantSkuCount": 2,
-          "total": 1030,
+          "total": 1031,
+          "equivalentTotal": 3801,
           "months": {
             "2026-01": 139,
             "2026-02": 183,
             "2026-03": 217,
             "2026-04": 158,
             "2026-05": 178,
-            "2026-06": 155
+            "2026-06": 156
           }
         },
         {
@@ -1957,6 +2108,7 @@
           ],
           "variantSkuCount": 1,
           "total": 650,
+          "equivalentTotal": 1950,
           "months": {
             "2026-01": 11,
             "2026-02": 70,
@@ -1972,34 +2124,39 @@
           "sku": "60145/05",
           "title": "Denní hygienická vložka „Jemná péče“ - 5 ks",
           "baseSku": "60145",
+          "packSize": 5,
           "months": {
             "2026-01": 378,
             "2026-02": 407,
             "2026-03": 381,
             "2026-04": 364,
             "2026-05": 469,
-            "2026-06": 554
+            "2026-06": 557
           },
-          "total": 2553
+          "total": 2556,
+          "equivalentTotal": 12780
         },
         {
           "sku": "63601/05",
           "title": "Denní vložka Energie života - 5 ks",
           "baseSku": "63601",
+          "packSize": 5,
           "months": {
             "2026-01": 182,
             "2026-02": 292,
             "2026-03": 331,
             "2026-04": 293,
             "2026-05": 382,
-            "2026-06": 372
+            "2026-06": 373
           },
-          "total": 1852
+          "total": 1853,
+          "equivalentTotal": 9265
         },
         {
           "sku": "60145/10",
           "title": "Denní hygienická vložka „Jemná péče“ - 10 ks",
           "baseSku": "60145",
+          "packSize": 10,
           "months": {
             "2026-01": 346,
             "2026-02": 622,
@@ -2008,12 +2165,14 @@
             "2026-05": 155,
             "2026-06": 246
           },
-          "total": 1683
+          "total": 1683,
+          "equivalentTotal": 16830
         },
         {
           "sku": "30118/03",
           "title": "Kosmetická fytonáplast Wutong - 3 ks",
           "baseSku": "30118",
+          "packSize": 3,
           "months": {
             "2026-01": 300,
             "2026-02": 336,
@@ -2022,26 +2181,30 @@
             "2026-05": 203,
             "2026-06": 20
           },
-          "total": 1570
+          "total": 1570,
+          "equivalentTotal": 4710
         },
         {
           "sku": "41314/05",
           "title": "Náplast na nohy - 5 ks",
           "baseSku": "41314",
+          "packSize": 5,
           "months": {
             "2026-01": 198,
             "2026-02": 435,
             "2026-03": 252,
             "2026-04": 222,
             "2026-05": 188,
-            "2026-06": 142
+            "2026-06": 143
           },
-          "total": 1437
+          "total": 1438,
+          "equivalentTotal": 7190
         },
         {
           "sku": "63601/10",
           "title": "Denní vložka Energie života - 10 ks",
           "baseSku": "63601",
+          "packSize": 10,
           "months": {
             "2026-01": 50,
             "2026-02": 322,
@@ -2050,12 +2213,14 @@
             "2026-05": 221,
             "2026-06": 273
           },
-          "total": 1367
+          "total": 1367,
+          "equivalentTotal": 13670
         },
         {
           "sku": "41105/03",
           "title": "Regenerační krém na nohy s hadím olejem - 3 ks",
           "baseSku": "41105",
+          "packSize": 3,
           "months": {
             "2026-01": 185,
             "2026-02": 220,
@@ -2064,12 +2229,14 @@
             "2026-05": 196,
             "2026-06": 174
           },
-          "total": 1269
+          "total": 1269,
+          "equivalentTotal": 3807
         },
         {
           "sku": "30117/03",
           "title": "Kosmetická fytonáplast Jian Kang - 3 ks",
           "baseSku": "30117",
+          "packSize": 3,
           "months": {
             "2026-01": 41,
             "2026-02": 310,
@@ -2078,12 +2245,14 @@
             "2026-05": 191,
             "2026-06": 120
           },
-          "total": 1227
+          "total": 1227,
+          "equivalentTotal": 3681
         },
         {
           "sku": "30118/05",
           "title": "Kosmetická fytonáplast Wutong - 5 ks",
           "baseSku": "30118",
+          "packSize": 5,
           "months": {
             "2026-01": 174,
             "2026-02": 242,
@@ -2092,12 +2261,14 @@
             "2026-05": 153,
             "2026-06": 153
           },
-          "total": 1169
+          "total": 1169,
+          "equivalentTotal": 5845
         },
         {
           "sku": "41105/05",
           "title": "Regenerační krém na nohy s hadím olejem - 5 ks",
           "baseSku": "41105",
+          "packSize": 5,
           "months": {
             "2026-01": 166,
             "2026-02": 154,
@@ -2106,12 +2277,14 @@
             "2026-05": 179,
             "2026-06": 138
           },
-          "total": 991
+          "total": 991,
+          "equivalentTotal": 4955
         },
         {
           "sku": "41328/10",
           "title": "Levandulová náplast na nohy - 10 ks",
           "baseSku": "41328",
+          "packSize": 10,
           "months": {
             "2026-01": 67,
             "2026-02": 99,
@@ -2120,12 +2293,14 @@
             "2026-05": 268,
             "2026-06": 91
           },
-          "total": 834
+          "total": 834,
+          "equivalentTotal": 8340
         },
         {
           "sku": "30117/05",
           "title": "Kosmetická fytonáplast Jian Kang - 5 ks",
           "baseSku": "30117",
+          "packSize": 5,
           "months": {
             "2026-01": 199,
             "2026-02": 155,
@@ -2134,12 +2309,14 @@
             "2026-05": 103,
             "2026-06": 67
           },
-          "total": 829
+          "total": 829,
+          "equivalentTotal": 4145
         },
         {
           "sku": "41106/03",
           "title": "Preventivní krém na nohy s hadím olejem - 3 ks",
           "baseSku": "41106",
+          "packSize": 3,
           "months": {
             "2026-01": 100,
             "2026-02": 119,
@@ -2148,12 +2325,14 @@
             "2026-05": 112,
             "2026-06": 100
           },
-          "total": 677
+          "total": 677,
+          "equivalentTotal": 2031
         },
         {
           "sku": "52902/03",
           "title": "Revitalizační maska na obličej a krk Lingzhi - 3ks",
           "baseSku": "52902",
+          "packSize": 3,
           "months": {
             "2026-01": 11,
             "2026-02": 70,
@@ -2162,12 +2341,14 @@
             "2026-05": 3,
             "2026-06": 1
           },
-          "total": 650
+          "total": 650,
+          "equivalentTotal": 1950
         },
         {
           "sku": "41328/05",
           "title": "Levandulová náplast na nohy - 5 ks",
           "baseSku": "41328",
+          "packSize": 5,
           "months": {
             "2026-01": 129,
             "2026-02": 154,
@@ -2176,12 +2357,14 @@
             "2026-05": 0,
             "2026-06": 0
           },
-          "total": 603
+          "total": 603,
+          "equivalentTotal": 3015
         },
         {
           "sku": "41314/10",
           "title": "Náplast na nohy - 10 ks",
           "baseSku": "41314",
+          "packSize": 10,
           "months": {
             "2026-01": 85,
             "2026-02": 138,
@@ -2190,12 +2373,14 @@
             "2026-05": 76,
             "2026-06": 55
           },
-          "total": 557
+          "total": 557,
+          "equivalentTotal": 5570
         },
         {
           "sku": "63601/08",
           "title": "Denní vložka Energie života - 8 ks",
           "baseSku": "63601",
+          "packSize": 8,
           "months": {
             "2026-01": 286,
             "2026-02": 85,
@@ -2204,12 +2389,14 @@
             "2026-05": 34,
             "2026-06": 34
           },
-          "total": 542
+          "total": 542,
+          "equivalentTotal": 4336
         },
         {
           "sku": "41328/07",
           "title": "Levandulová náplast na nohy - 7 ks",
           "baseSku": "41328",
+          "packSize": 7,
           "months": {
             "2026-01": 0,
             "2026-02": 0,
@@ -2218,21 +2405,24 @@
             "2026-05": 227,
             "2026-06": 66
           },
-          "total": 444
+          "total": 444,
+          "equivalentTotal": 3108
         },
         {
           "sku": "41106/05",
           "title": "Preventivní krém na nohy s hadím olejem - 5 ks",
           "baseSku": "41106",
+          "packSize": 5,
           "months": {
             "2026-01": 39,
             "2026-02": 64,
             "2026-03": 73,
             "2026-04": 56,
             "2026-05": 66,
-            "2026-06": 55
+            "2026-06": 56
           },
-          "total": 353
+          "total": 354,
+          "equivalentTotal": 1770
         }
       ]
     }
