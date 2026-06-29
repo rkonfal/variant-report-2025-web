@@ -80,6 +80,8 @@ function renderMonths(months) {
     <tr>
       <td><strong>${row.label}</strong></td>
       <td>${formatInt(row.variantUnits)}</td>
+      <td>${formatInt(row.equivalentUnits)}</td>
+      <td>${formatCurrency(row.equivalentUnits * 3)}</td>
       <td>${formatInt(row.allUnits)}</td>
       <td>${formatPct(row.sharePct)}</td>
       <td>${formatInt(row.activeVariantSkus)}</td>
@@ -117,7 +119,7 @@ function renderInsights(yearReport) {
   document.querySelector("#insights").innerHTML = `
     <article class="insight">
       <strong>Průměrný měsíc v roce ${yearReport.year}</strong>
-      <div>Prodalo se ${formatInt(averageMonthUnits)} variantních kusů měsíčně, tedy v průměru ${formatPct(averageMonthShare)} ze všech měsíčních kusů.</div>
+      <div>Prodalo se ${formatInt(averageMonthUnits)} variantních kusů měsíčně, tedy v průměru ${formatPct(averageMonthShare)} ze všech měsíčních kusů. To odpovídá cca ${formatCurrency(((yearReport.summary.equivalentUnits || 0) / Math.max(yearReport.months.length, 1)) * 3)} měsíčně za expedici.</div>
     </article>
     <article class="insight">
       <strong>Největší tahoun: ${topSku.sku}</strong>

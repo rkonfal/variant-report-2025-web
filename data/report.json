@@ -66,6 +66,7 @@
           "month": "2025-01",
           "label": "leden",
           "variantUnits": 6038,
+          "equivalentUnits": 31801,
           "allUnits": 164308,
           "sharePct": 3.67,
           "activeVariantSkus": 36
@@ -74,6 +75,7 @@
           "month": "2025-02",
           "label": "unor",
           "variantUnits": 6381,
+          "equivalentUnits": 36650,
           "allUnits": 166325,
           "sharePct": 3.84,
           "activeVariantSkus": 29
@@ -82,6 +84,7 @@
           "month": "2025-03",
           "label": "brezen",
           "variantUnits": 5267,
+          "equivalentUnits": 32085,
           "allUnits": 178622,
           "sharePct": 2.95,
           "activeVariantSkus": 29
@@ -90,6 +93,7 @@
           "month": "2025-04",
           "label": "duben",
           "variantUnits": 4478,
+          "equivalentUnits": 25273,
           "allUnits": 187402,
           "sharePct": 2.39,
           "activeVariantSkus": 27
@@ -98,6 +102,7 @@
           "month": "2025-05",
           "label": "kveten",
           "variantUnits": 3869,
+          "equivalentUnits": 21596,
           "allUnits": 154072,
           "sharePct": 2.51,
           "activeVariantSkus": 28
@@ -106,6 +111,7 @@
           "month": "2025-06",
           "label": "cerven",
           "variantUnits": 4558,
+          "equivalentUnits": 28619,
           "allUnits": 123560,
           "sharePct": 3.69,
           "activeVariantSkus": 27
@@ -114,6 +120,7 @@
           "month": "2025-07",
           "label": "cervenec",
           "variantUnits": 4907,
+          "equivalentUnits": 29259,
           "allUnits": 142882,
           "sharePct": 3.43,
           "activeVariantSkus": 28
@@ -122,6 +129,7 @@
           "month": "2025-08",
           "label": "srpen",
           "variantUnits": 3636,
+          "equivalentUnits": 19352,
           "allUnits": 143721,
           "sharePct": 2.53,
           "activeVariantSkus": 23
@@ -130,6 +138,7 @@
           "month": "2025-09",
           "label": "zari",
           "variantUnits": 3142,
+          "equivalentUnits": 18236,
           "allUnits": 113398,
           "sharePct": 2.77,
           "activeVariantSkus": 25
@@ -138,6 +147,7 @@
           "month": "2025-10",
           "label": "rijen",
           "variantUnits": 4245,
+          "equivalentUnits": 25489,
           "allUnits": 122082,
           "sharePct": 3.48,
           "activeVariantSkus": 25
@@ -146,6 +156,7 @@
           "month": "2025-11",
           "label": "listopad",
           "variantUnits": 6914,
+          "equivalentUnits": 41474,
           "allUnits": 198317,
           "sharePct": 3.49,
           "activeVariantSkus": 22
@@ -154,6 +165,7 @@
           "month": "2025-12",
           "label": "prosinec",
           "variantUnits": 2649,
+          "equivalentUnits": 13811,
           "allUnits": 96670,
           "sharePct": 2.74,
           "activeVariantSkus": 18
@@ -1717,6 +1729,7 @@
           "month": "2026-01",
           "label": "leden",
           "variantUnits": 2936,
+          "equivalentUnits": 17004,
           "allUnits": 120370,
           "sharePct": 2.44,
           "activeVariantSkus": 18
@@ -1725,6 +1738,7 @@
           "month": "2026-02",
           "label": "unor",
           "variantUnits": 4224,
+          "equivalentUnits": 25170,
           "allUnits": 113958,
           "sharePct": 3.71,
           "activeVariantSkus": 18
@@ -1733,6 +1747,7 @@
           "month": "2026-03",
           "label": "brezen",
           "variantUnits": 3695,
+          "equivalentUnits": 19641,
           "allUnits": 145026,
           "sharePct": 2.55,
           "activeVariantSkus": 18
@@ -1741,6 +1756,7 @@
           "month": "2026-04",
           "label": "duben",
           "variantUnits": 3865,
+          "equivalentUnits": 20243,
           "allUnits": 132383,
           "sharePct": 2.92,
           "activeVariantSkus": 19
@@ -1749,6 +1765,7 @@
           "month": "2026-05",
           "label": "kveten",
           "variantUnits": 3226,
+          "equivalentUnits": 18876,
           "allUnits": 127484,
           "sharePct": 2.53,
           "activeVariantSkus": 18
@@ -1757,6 +1774,7 @@
           "month": "2026-06",
           "label": "cerven",
           "variantUnits": 2667,
+          "equivalentUnits": 16064,
           "allUnits": 102376,
           "sharePct": 2.61,
           "activeVariantSkus": 18

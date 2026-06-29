@@ -254,6 +254,11 @@ def build_year_report(year: int, variants: dict[str, VariantSku], all_units_by_m
 
     for month in year_months:
         variant_units = int(round(sum(sku.months.get(month, 0) for sku in variants.values())))
+        equivalent_units = int(
+            round(
+                sum(sku.months.get(month, 0) * sku.pack_size for sku in variants.values())
+            )
+        )
         all_units = int(round(all_units_by_month.get(month, 0)))
         active_variant_skus = sum(1 for sku in variants.values() if sku.months.get(month, 0) > 0)
         share_pct = round((variant_units / all_units) * 100, 2) if all_units else 0.0
@@ -262,6 +267,7 @@ def build_year_report(year: int, variants: dict[str, VariantSku], all_units_by_m
                 "month": month,
                 "label": month_labels[month],
                 "variantUnits": variant_units,
+                "equivalentUnits": equivalent_units,
                 "allUnits": all_units,
                 "sharePct": share_pct,
                 "activeVariantSkus": active_variant_skus,
