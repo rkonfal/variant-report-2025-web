@@ -25,7 +25,7 @@ function monthPeak(months) {
 function renderSummary(summary) {
   const grid = document.querySelector("#summary-grid");
   const items = [
-    ["Variantní kusy", formatInt(summary.variantUnits), "Všechno prodané přesně v suffix formátu /dd."],
+    ["Variantní kusy", formatInt(summary.variantUnits), summary.definitionShort || "Všechno prodané přesně v suffix formátu /dd."],
     ["Podíl na všech kusech", formatPct(summary.sharePct), "Jak velká část prodejů byla variantní SKU."],
     ["Aktivní variantní SKU", formatInt(summary.skuCount), "Počet SKU, která měla v roce 2025 prodej."],
     ["Základní produkty", formatInt(summary.baseCount), "Kolik základních kódů mělo aspoň jednu prodanou variantu."],
@@ -131,6 +131,10 @@ function renderSkuRows(skus, filter = "") {
 async function init() {
   try {
     const report = await loadReport();
+    const sourceEl = document.querySelector("#source-note");
+    if (sourceEl && report.source?.logic) {
+      sourceEl.textContent = report.source.logic;
+    }
     document.querySelector("#generated-at").textContent = `Generováno ${new Date(report.generatedAt).toLocaleString("cs-CZ")}`;
     renderSummary(report.summary);
     renderMonths(report.months);

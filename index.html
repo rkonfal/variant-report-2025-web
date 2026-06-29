@@ -16,13 +16,15 @@
         <p class="eyebrow">Eshop analytics / varianty SKU</p>
         <h1>Webový report variant produktů za rok 2025</h1>
         <p class="lede">
-          Přesná definice v tomto reportu: varianta je SKU končící ve tvaru
-          <code>/01</code>, <code>/02</code>, <code>/03</code> atd.
+          Varianta je buď přímo prodané SKU ve tvaru <code>/01</code>, <code>/02</code>,
+          <code>/03</code> atd., nebo katalogová varianta dopočítaná přes mapování
+          <code>product_variants.variant_code</code>, když se suffix v objednávce ukládá jen přes variantu.
         </p>
       </div>
       <div class="hero-note">
         <div class="note-label">Zdroj</div>
-        <div class="note-value">ordering_sales_history.json / view complete</div>
+        <div class="note-value">eshop_analytics.orders + order_items + product_variants</div>
+        <div class="note-subtle" id="source-note">Načítám definici…</div>
         <div class="note-subtle" id="generated-at">Načítám…</div>
       </div>
     </section>
