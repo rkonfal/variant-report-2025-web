@@ -1,5 +1,5 @@
 async function loadReport() {
-  const response = await fetch("./data/report.json");
+  const response = await fetch("./data/report.json?v=20260629-1949", { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`Failed to load report.json: ${response.status}`);
   }
