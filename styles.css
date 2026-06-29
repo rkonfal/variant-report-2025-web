@@ -142,12 +142,31 @@ code,
   margin-bottom: 18px;
 }
 
+.year-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.year-tab,
 .chip {
   border-radius: 999px;
   padding: 8px 12px;
+  font: inherit;
+  font-family: var(--mono);
   background: rgba(200, 76, 43, 0.08);
   color: var(--brand);
   border: 1px solid rgba(200, 76, 43, 0.16);
+}
+
+.year-tab {
+  cursor: pointer;
+}
+
+.year-tab.is-active {
+  background: var(--brand);
+  color: #fff7ee;
+  border-color: var(--brand);
 }
 
 .month-chart {

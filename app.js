@@ -17,17 +17,30 @@ function formatPct(value) {
   }).format(value) + " %";
 }
 
-function monthPeak(months) {
-  return Object.entries(months)
-    .sort((a, b) => b[1] - a[1])[0];
+function monthPeak(months, monthLabels) {
+  const [month, value] = Object.entries(months).sort((a, b) => b[1] - a[1])[0];
+  return [monthLabels[month] || month, value];
 }
 
-function renderSummary(summary) {
+function renderYearTabs(report, activeYear, onChange) {
+  const tabs = document.querySelector("#year-tabs");
+  tabs.innerHTML = report.availableYears.map((year) => `
+    <button class="year-tab${year === activeYear ? " is-active" : ""}" type="button" data-year="${year}">
+      ${year}
+    </button>
+  `).join("");
+
+  tabs.querySelectorAll("[data-year]").forEach((button) => {
+    button.addEventListener("click", () => onChange(Number(button.dataset.year)));
+  });
+}
+
+function renderSummary(summary, year) {
   const grid = document.querySelector("#summary-grid");
   const items = [
     ["Variantní kusy", formatInt(summary.variantUnits), summary.definitionShort || "Všechno prodané přesně v suffix formátu /dd."],
     ["Podíl na všech kusech", formatPct(summary.sharePct), "Jak velká část prodejů byla variantní SKU."],
-    ["Aktivní variantní SKU", formatInt(summary.skuCount), "Počet SKU, která měla v roce 2025 prodej."],
+    ["Aktivní variantní SKU", formatInt(summary.skuCount), `Počet SKU, která měla v roce ${year} prodej.`],
     ["Základní produkty", formatInt(summary.baseCount), "Kolik základních kódů mělo aspoň jednu prodanou variantu."],
   ];
 
@@ -41,7 +54,7 @@ function renderSummary(summary) {
 }
 
 function renderMonths(months) {
-  const max = Math.max(...months.map((row) => row.variantUnits));
+  const max = Math.max(1, ...months.map((row) => row.variantUnits));
   document.querySelector("#month-chart").innerHTML = months.map((row) => `
     <div class="bar-row">
       <div class="bar-label">${row.label}</div>
@@ -73,12 +86,14 @@ function renderTopSkus(topSkus) {
   `).join("");
 }
 
-function renderInsights(report) {
-  const sortedMonths = [...report.months].sort((a, b) => b.variantUnits - a.variantUnits);
+function renderInsights(yearReport) {
+  const sortedMonths = [...yearReport.months].sort((a, b) => b.variantUnits - a.variantUnits);
   const topMonth = sortedMonths[0];
-  const topSku = report.topSkus[0];
-  const concentration = (topSku.total / report.summary.variantUnits) * 100;
-  const topBase = [...report.baseProducts].sort((a, b) => b.total - a.total)[0];
+  const topSku = yearReport.topSkus[0];
+  const concentration = yearReport.summary.variantUnits
+    ? (topSku.total / yearReport.summary.variantUnits) * 100
+    : 0;
+  const topBase = [...yearReport.baseProducts].sort((a, b) => b.total - a.total)[0];
 
   document.querySelector("#insights").innerHTML = `
     <article class="insight">
@@ -87,7 +102,7 @@ function renderInsights(report) {
     </article>
     <article class="insight">
       <strong>Největší tahoun: ${topSku.sku}</strong>
-      <div>${formatInt(topSku.total)} ks za rok 2025. To je ${formatPct(concentration)} všech variantních prodejů.</div>
+      <div>${formatInt(topSku.total)} ks za rok ${yearReport.year}. To je ${formatPct(concentration)} všech variantních prodejů.</div>
     </article>
     <article class="insight">
       <strong>Nejsilnější základní produkt: ${topBase.baseSku}</strong>
@@ -107,7 +122,7 @@ function renderBaseProducts(baseProducts) {
   `).join("");
 }
 
-function renderSkuRows(skus, filter = "") {
+function renderSkuRows(skus, monthLabels, filter = "") {
   const needle = filter.trim().toLowerCase();
   const rows = skus.filter((row) => {
     if (!needle) return true;
@@ -115,7 +130,7 @@ function renderSkuRows(skus, filter = "") {
   });
 
   document.querySelector("#all-skus-body").innerHTML = rows.map((row) => {
-    const [peakMonth, peakValue] = monthPeak(row.months);
+    const [peakMonth, peakValue] = monthPeak(row.months, monthLabels);
     return `
       <tr>
         <td><strong>${row.sku}</strong></td>
@@ -128,24 +143,51 @@ function renderSkuRows(skus, filter = "") {
   }).join("");
 }
 
+function updateYearLabels(year) {
+  document.querySelector("#current-year-chip").textContent = String(year);
+  document.querySelector("#top-skus-total-label").textContent = String(year);
+  document.querySelector("#base-products-total-label").textContent = String(year);
+  document.querySelector("#all-skus-total-label").textContent = String(year);
+}
+
+function renderYear(report, activeYear) {
+  const yearReport = report.annual.find((item) => item.year === activeYear) || report.annual[0];
+  const monthLabels = report.monthLabels || {};
+  const filterValue = document.querySelector("#sku-filter").value;
+
+  updateYearLabels(yearReport.year);
+  renderSummary(yearReport.summary, yearReport.year);
+  renderMonths(yearReport.months);
+  renderTopSkus(yearReport.topSkus);
+  renderInsights(yearReport);
+  renderBaseProducts(yearReport.baseProducts);
+  renderSkuRows(yearReport.skus, monthLabels, filterValue);
+}
+
 async function init() {
   try {
     const report = await loadReport();
     const sourceEl = document.querySelector("#source-note");
+    let activeYear = report.defaultYear || report.availableYears?.[0];
+
     if (sourceEl && report.source?.logic) {
       sourceEl.textContent = report.source.logic;
     }
     document.querySelector("#generated-at").textContent = `Generováno ${new Date(report.generatedAt).toLocaleString("cs-CZ")}`;
-    renderSummary(report.summary);
-    renderMonths(report.months);
-    renderTopSkus(report.topSkus);
-    renderInsights(report);
-    renderBaseProducts(report.baseProducts);
-    renderSkuRows(report.skus);
 
-    document.querySelector("#sku-filter").addEventListener("input", (event) => {
-      renderSkuRows(report.skus, event.target.value);
+    const render = () => {
+      renderYearTabs(report, activeYear, (nextYear) => {
+        activeYear = nextYear;
+        render();
+      });
+      renderYear(report, activeYear);
+    };
+
+    document.querySelector("#sku-filter").addEventListener("input", () => {
+      renderYear(report, activeYear);
     });
+
+    render();
   } catch (error) {
     document.body.innerHTML = `<main class="shell"><section class="panel"><h1>Report se nepodařilo načíst</h1><p>${error.message}</p></section></main>`;
   }

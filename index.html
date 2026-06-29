@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Varianty produktů 2025</title>
+  <title>Varianty produktů 2025 a 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">Eshop analytics / varianty SKU</p>
-        <h1>Webový report variant produktů za rok 2025</h1>
+        <h1>Webový report variant produktů za roky 2025 a 2026</h1>
         <p class="lede">
           Varianta je buď přímo prodané SKU ve tvaru <code>/01</code>, <code>/02</code>,
           <code>/03</code> atd., nebo katalogová varianta dopočítaná přes mapování
@@ -37,8 +37,9 @@
           <p class="eyebrow">Měsíční vývoj</p>
           <h2>Kolik variant se prodalo po měsících</h2>
         </div>
-        <div class="chip">2025</div>
+        <div class="year-tabs" id="year-tabs"></div>
       </div>
+      <div class="chip" id="current-year-chip">...</div>
       <div class="month-chart" id="month-chart"></div>
       <div class="table-wrap">
         <table>
@@ -70,7 +71,7 @@
               <tr>
                 <th>SKU</th>
                 <th>Název</th>
-                <th>2025</th>
+                <th id="top-skus-total-label">Rok</th>
               </tr>
             </thead>
             <tbody id="top-skus-body"></tbody>
@@ -103,7 +104,7 @@
               <th>Základní SKU</th>
               <th>Varianty</th>
               <th>Počet variant</th>
-              <th>2025</th>
+              <th id="base-products-total-label">Rok</th>
             </tr>
           </thead>
           <tbody id="base-products-body"></tbody>
@@ -129,7 +130,7 @@
               <th>SKU</th>
               <th>Název</th>
               <th>Základ</th>
-              <th>2025</th>
+              <th id="all-skus-total-label">Rok</th>
               <th>Peak měsíc</th>
             </tr>
           </thead>

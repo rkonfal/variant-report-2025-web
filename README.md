@@ -1,6 +1,6 @@
-# Varianty produktů 2025
+# Varianty produktů 2025 a 2026
 
-Statický webový report nad prodeji variantních SKU za rok 2025.
+Statický webový report nad prodeji variantních SKU za roky 2025 a 2026.
 
 ## Live
 
