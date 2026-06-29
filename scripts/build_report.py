@@ -34,6 +34,7 @@ MONTH_LABELS = {
     "2025-11": "listopad",
     "2025-12": "prosinec",
 }
+EXCLUDED_SUFFIXES = {"/01"}
 
 
 @dataclass
@@ -94,6 +95,10 @@ def build_title(product_title: str, variant_title: str, sku: str) -> str:
     return sku
 
 
+def is_excluded_variant(variant_code: str) -> bool:
+    return any(variant_code.endswith(suffix) for suffix in EXCLUDED_SUFFIXES)
+
+
 def fetch_variant_rows() -> dict[str, VariantSku]:
     rows = run_psql(
         """
@@ -119,6 +124,8 @@ def fetch_variant_rows() -> dict[str, VariantSku]:
 
     variants: dict[str, VariantSku] = {}
     for variant_code, raw_product_code, variant_title, product_title, month, quantity in rows:
+        if is_excluded_variant(variant_code):
+            continue
         base_sku = variant_code.split("/", 1)[0]
         sku = variants.get(variant_code)
         if sku is None:
@@ -219,7 +226,7 @@ def build_report() -> dict:
         "sharePct": round((variant_units_total / all_units_total) * 100, 2) if all_units_total else 0.0,
         "skuCount": len(skus_payload),
         "baseCount": len(base_products_payload),
-        "definitionShort": "Literalni /dd SKU nebo katalogove varianty mapovane pres product_variants.variant_code.",
+        "definitionShort": "Varianty /dd mapovane i pres product_variants.variant_code, ale bez suffixu /01.",
     }
 
     return {
@@ -232,7 +239,7 @@ def build_report() -> dict:
         "source": {
             "database": "eshop_analytics",
             "tables": ["orders", "order_items", "product_variants", "products"],
-            "logic": "Varianta je bud prime product_code ve tvaru /dd, nebo variant_code z product_variants pro polozky, kde se suffix v objednavce neuklada primo do product_code.",
+            "logic": "Varianta je bud prime product_code ve tvaru /dd, nebo variant_code z product_variants pro polozky, kde se suffix v objednavce neuklada primo do product_code. Z reportu jsou zamerne vyrazeny vsechny varianty koncici na /01.",
         },
         "summary": summary,
         "months": months_payload,
@@ -296,7 +303,7 @@ def export_support_files(report: dict) -> None:
     markdown = [
         "# Varianty produktu za 2025",
         "",
-        "Definice varianty v tomto reportu: bud skutecne prodane SKU koncici na `/dd`, nebo katalogova varianta mapovana pres `product_variants.variant_code`.",
+        "Definice varianty v tomto reportu: bud skutecne prodane SKU koncici na `/dd`, nebo katalogova varianta mapovana pres `product_variants.variant_code`. Vsechny varianty koncici na `/01` jsou zamerne vyrazeny.",
         "",
         f"- Celkem prodano variantnich kusu: **{report['summary']['variantUnits']:,}**".replace(",", " "),
         f"- Celkem prodano vsech kusu: **{report['summary']['allUnits']:,}**".replace(",", " "),
