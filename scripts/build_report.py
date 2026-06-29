@@ -36,6 +36,11 @@ MONTH_NAMES = {
     12: "prosinec",
 }
 EXCLUDED_SUFFIXES = {"/01"}
+EXCLUDED_VARIANT_CODES = {
+    "90165/02",
+    "52901/03",
+    "11317/03",
+}
 EXCLUDED_TITLE_PHRASES = (
     "ocni stiny",
     "zubni kartacek",
@@ -135,7 +140,9 @@ def build_title(product_title: str, variant_title: str, sku: str) -> str:
 
 
 def is_excluded_variant(variant_code: str) -> bool:
-    return any(variant_code.endswith(suffix) for suffix in EXCLUDED_SUFFIXES)
+    return variant_code in EXCLUDED_VARIANT_CODES or any(
+        variant_code.endswith(suffix) for suffix in EXCLUDED_SUFFIXES
+    )
 
 
 def is_excluded_title(product_title: str, variant_title: str, variant_code: str) -> bool:
@@ -284,7 +291,7 @@ def build_year_report(year: int, variants: dict[str, VariantSku], all_units_by_m
         "sharePct": round((variant_units_total / all_units_total) * 100, 2) if all_units_total else 0.0,
         "skuCount": len(skus_payload),
         "baseCount": len(base_products_payload),
-        "definitionShort": "Varianty /dd mapovane i pres product_variants.variant_code, bez /01 a bez vybranych kategorii.",
+        "definitionShort": "Varianty /dd mapovane i pres product_variants.variant_code, bez /01, bez 90165/02, 52901/03, 11317/03 a bez vybranych kategorii.",
     }
 
     return {
@@ -319,7 +326,7 @@ def build_report() -> dict:
         "source": {
             "database": "eshop_analytics",
             "tables": ["orders", "order_items", "product_variants", "products"],
-            "logic": "Varianta je bud prime product_code ve tvaru /dd, nebo variant_code z product_variants pro polozky, kde se suffix v objednavce neuklada primo do product_code. Z reportu jsou zamerne vyrazeny vsechny varianty koncici na /01 a take kategorie stiny, kartacky na zuby, pudry, tuzky na oci, panske spodni pradlo a ovocne balzamy.",
+            "logic": "Varianta je bud prime product_code ve tvaru /dd, nebo variant_code z product_variants pro polozky, kde se suffix v objednavce neuklada primo do product_code. Z reportu jsou zamerne vyrazeny vsechny varianty koncici na /01, explicitne take SKU 90165/02, 52901/03 a 11317/03, a dale kategorie stiny, kartacky na zuby, pudry, tuzky na oci, panske spodni pradlo a ovocne balzamy.",
         },
         "annual": annual_payload,
     }
@@ -385,7 +392,7 @@ def export_markdown(report: dict) -> None:
     markdown = [
         "# Varianty produktu za 2025 a 2026",
         "",
-        "Definice varianty v tomto reportu: bud skutecne prodane SKU koncici na `/dd`, nebo katalogova varianta mapovana pres `product_variants.variant_code`. Zamerne jsou vyrazeny vsechny varianty koncici na `/01` a take kategorie stiny, kartacky na zuby, pudry, tuzky na oci, panske spodni pradlo a ovocne balzamy.",
+        "Definice varianty v tomto reportu: bud skutecne prodane SKU koncici na `/dd`, nebo katalogova varianta mapovana pres `product_variants.variant_code`. Zamerne jsou vyrazeny vsechny varianty koncici na `/01`, explicitne take `90165/02`, `52901/03` a `11317/03`, a dale kategorie stiny, kartacky na zuby, pudry, tuzky na oci, panske spodni pradlo a ovocne balzamy.",
         "",
     ]
 

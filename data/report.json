@@ -47,115 +47,115 @@
       "product_variants",
       "products"
     ],
-    "logic": "Varianta je bud prime product_code ve tvaru /dd, nebo variant_code z product_variants pro polozky, kde se suffix v objednavce neuklada primo do product_code. Z reportu jsou zamerne vyrazeny vsechny varianty koncici na /01 a take kategorie stiny, kartacky na zuby, pudry, tuzky na oci, panske spodni pradlo a ovocne balzamy."
+    "logic": "Varianta je bud prime product_code ve tvaru /dd, nebo variant_code z product_variants pro polozky, kde se suffix v objednavce neuklada primo do product_code. Z reportu jsou zamerne vyrazeny vsechny varianty koncici na /01, explicitne take SKU 90165/02, 52901/03 a 11317/03, a dale kategorie stiny, kartacky na zuby, pudry, tuzky na oci, panske spodni pradlo a ovocne balzamy."
   },
   "annual": [
     {
       "year": 2025,
       "summary": {
-        "variantUnits": 57204,
+        "variantUnits": 56084,
         "allUnits": 1791359,
-        "sharePct": 3.19,
-        "skuCount": 41,
-        "baseCount": 19,
-        "definitionShort": "Varianty /dd mapovane i pres product_variants.variant_code, bez /01 a bez vybranych kategorii."
+        "sharePct": 3.13,
+        "skuCount": 39,
+        "baseCount": 17,
+        "definitionShort": "Varianty /dd mapovane i pres product_variants.variant_code, bez /01, bez 90165/02, 52901/03, 11317/03 a bez vybranych kategorii."
       },
       "months": [
         {
           "month": "2025-01",
           "label": "leden",
-          "variantUnits": 6231,
+          "variantUnits": 6038,
           "allUnits": 164308,
-          "sharePct": 3.79,
-          "activeVariantSkus": 37
+          "sharePct": 3.67,
+          "activeVariantSkus": 36
         },
         {
           "month": "2025-02",
           "label": "unor",
-          "variantUnits": 6607,
+          "variantUnits": 6381,
           "allUnits": 166325,
-          "sharePct": 3.97,
-          "activeVariantSkus": 30
+          "sharePct": 3.84,
+          "activeVariantSkus": 29
         },
         {
           "month": "2025-03",
           "label": "brezen",
-          "variantUnits": 5323,
+          "variantUnits": 5267,
           "allUnits": 178622,
-          "sharePct": 2.98,
-          "activeVariantSkus": 30
+          "sharePct": 2.95,
+          "activeVariantSkus": 29
         },
         {
           "month": "2025-04",
           "label": "duben",
-          "variantUnits": 4517,
+          "variantUnits": 4478,
           "allUnits": 187402,
-          "sharePct": 2.41,
-          "activeVariantSkus": 28
+          "sharePct": 2.39,
+          "activeVariantSkus": 27
         },
         {
           "month": "2025-05",
           "label": "kveten",
-          "variantUnits": 3905,
+          "variantUnits": 3869,
           "allUnits": 154072,
-          "sharePct": 2.53,
-          "activeVariantSkus": 29
+          "sharePct": 2.51,
+          "activeVariantSkus": 28
         },
         {
           "month": "2025-06",
           "label": "cerven",
-          "variantUnits": 4623,
+          "variantUnits": 4558,
           "allUnits": 123560,
-          "sharePct": 3.74,
-          "activeVariantSkus": 28
+          "sharePct": 3.69,
+          "activeVariantSkus": 27
         },
         {
           "month": "2025-07",
           "label": "cervenec",
-          "variantUnits": 5016,
+          "variantUnits": 4907,
           "allUnits": 142882,
-          "sharePct": 3.51,
-          "activeVariantSkus": 30
+          "sharePct": 3.43,
+          "activeVariantSkus": 28
         },
         {
           "month": "2025-08",
           "label": "srpen",
-          "variantUnits": 3715,
+          "variantUnits": 3636,
           "allUnits": 143721,
-          "sharePct": 2.58,
-          "activeVariantSkus": 25
+          "sharePct": 2.53,
+          "activeVariantSkus": 23
         },
         {
           "month": "2025-09",
           "label": "zari",
-          "variantUnits": 3191,
+          "variantUnits": 3142,
           "allUnits": 113398,
-          "sharePct": 2.81,
-          "activeVariantSkus": 27
+          "sharePct": 2.77,
+          "activeVariantSkus": 25
         },
         {
           "month": "2025-10",
           "label": "rijen",
-          "variantUnits": 4442,
+          "variantUnits": 4245,
           "allUnits": 122082,
-          "sharePct": 3.64,
-          "activeVariantSkus": 27
+          "sharePct": 3.48,
+          "activeVariantSkus": 25
         },
         {
           "month": "2025-11",
           "label": "listopad",
-          "variantUnits": 6965,
+          "variantUnits": 6914,
           "allUnits": 198317,
-          "sharePct": 3.51,
-          "activeVariantSkus": 23
+          "sharePct": 3.49,
+          "activeVariantSkus": 22
         },
         {
           "month": "2025-12",
           "label": "prosinec",
-          "variantUnits": 2669,
+          "variantUnits": 2649,
           "allUnits": 96670,
-          "sharePct": 2.76,
-          "activeVariantSkus": 19
+          "sharePct": 2.74,
+          "activeVariantSkus": 18
         }
       ],
       "topSkus": [
@@ -642,28 +642,6 @@
           }
         },
         {
-          "baseSku": "90165",
-          "variantSkus": [
-            "90165/02"
-          ],
-          "variantSkuCount": 1,
-          "total": 946,
-          "months": {
-            "2025-01": 193,
-            "2025-02": 226,
-            "2025-03": 56,
-            "2025-04": 39,
-            "2025-05": 36,
-            "2025-06": 65,
-            "2025-07": 29,
-            "2025-08": 32,
-            "2025-09": 15,
-            "2025-10": 184,
-            "2025-11": 51,
-            "2025-12": 20
-          }
-        },
-        {
           "baseSku": "80909",
           "variantSkus": [
             "80909/00"
@@ -705,28 +683,6 @@
             "2025-10": 115,
             "2025-11": 36,
             "2025-12": 12
-          }
-        },
-        {
-          "baseSku": "11317",
-          "variantSkus": [
-            "11317/03"
-          ],
-          "variantSkuCount": 1,
-          "total": 174,
-          "months": {
-            "2025-01": 0,
-            "2025-02": 0,
-            "2025-03": 0,
-            "2025-04": 0,
-            "2025-05": 0,
-            "2025-06": 0,
-            "2025-07": 80,
-            "2025-08": 47,
-            "2025-09": 34,
-            "2025-10": 13,
-            "2025-11": 0,
-            "2025-12": 0
           }
         },
         {
@@ -1184,26 +1140,6 @@
           "total": 1003
         },
         {
-          "sku": "90165/02",
-          "title": "Houba na mytí a masáž obličeje - tyrkysová barva",
-          "baseSku": "90165",
-          "months": {
-            "2025-01": 193,
-            "2025-02": 226,
-            "2025-03": 56,
-            "2025-04": 39,
-            "2025-05": 36,
-            "2025-06": 65,
-            "2025-07": 29,
-            "2025-08": 32,
-            "2025-09": 15,
-            "2025-10": 184,
-            "2025-11": 51,
-            "2025-12": 20
-          },
-          "total": 946
-        },
-        {
           "sku": "80409/12",
           "title": "Rtěnka - Odstín rtěnka 80409: Odstín 12",
           "baseSku": "80409",
@@ -1444,26 +1380,6 @@
           "total": 201
         },
         {
-          "sku": "11317/03",
-          "title": "Čistící náplast na nos Čisté póry 3 ks",
-          "baseSku": "11317",
-          "months": {
-            "2025-01": 0,
-            "2025-02": 0,
-            "2025-03": 0,
-            "2025-04": 0,
-            "2025-05": 0,
-            "2025-06": 0,
-            "2025-07": 80,
-            "2025-08": 47,
-            "2025-09": 34,
-            "2025-10": 13,
-            "2025-11": 0,
-            "2025-12": 0
-          },
-          "total": 174
-        },
-        {
           "sku": "80409/09",
           "title": "Rtěnka - Odstín rtěnka 80409: Odstín 09",
           "baseSku": "80409",
@@ -1668,61 +1584,61 @@
     {
       "year": 2026,
       "summary": {
-        "variantUnits": 21170,
-        "allUnits": 741235,
-        "sharePct": 2.86,
-        "skuCount": 22,
-        "baseCount": 12,
-        "definitionShort": "Varianty /dd mapovane i pres product_variants.variant_code, bez /01 a bez vybranych kategorii."
+        "variantUnits": 20607,
+        "allUnits": 741337,
+        "sharePct": 2.78,
+        "skuCount": 19,
+        "baseCount": 9,
+        "definitionShort": "Varianty /dd mapovane i pres product_variants.variant_code, bez /01, bez 90165/02, 52901/03, 11317/03 a bez vybranych kategorii."
       },
       "months": [
         {
           "month": "2026-01",
           "label": "leden",
-          "variantUnits": 2954,
+          "variantUnits": 2936,
           "allUnits": 120370,
-          "sharePct": 2.45,
-          "activeVariantSkus": 19
+          "sharePct": 2.44,
+          "activeVariantSkus": 18
         },
         {
           "month": "2026-02",
           "label": "unor",
-          "variantUnits": 4243,
+          "variantUnits": 4224,
           "allUnits": 113958,
-          "sharePct": 3.72,
-          "activeVariantSkus": 19
+          "sharePct": 3.71,
+          "activeVariantSkus": 18
         },
         {
           "month": "2026-03",
           "label": "brezen",
-          "variantUnits": 3723,
+          "variantUnits": 3695,
           "allUnits": 145026,
-          "sharePct": 2.57,
-          "activeVariantSkus": 19
+          "sharePct": 2.55,
+          "activeVariantSkus": 18
         },
         {
           "month": "2026-04",
           "label": "duben",
-          "variantUnits": 3996,
+          "variantUnits": 3865,
           "allUnits": 132383,
-          "sharePct": 3.02,
-          "activeVariantSkus": 22
+          "sharePct": 2.92,
+          "activeVariantSkus": 19
         },
         {
           "month": "2026-05",
           "label": "kveten",
-          "variantUnits": 3434,
+          "variantUnits": 3226,
           "allUnits": 127484,
-          "sharePct": 2.69,
-          "activeVariantSkus": 20
+          "sharePct": 2.53,
+          "activeVariantSkus": 18
         },
         {
           "month": "2026-06",
           "label": "cerven",
-          "variantUnits": 2820,
-          "allUnits": 102014,
-          "sharePct": 2.76,
-          "activeVariantSkus": 20
+          "variantUnits": 2661,
+          "allUnits": 102116,
+          "sharePct": 2.61,
+          "activeVariantSkus": 18
         }
       ],
       "topSkus": [
@@ -1736,9 +1652,9 @@
             "2026-03": 381,
             "2026-04": 364,
             "2026-05": 469,
-            "2026-06": 553
+            "2026-06": 554
           },
-          "total": 2552
+          "total": 2553
         },
         {
           "sku": "63601/05",
@@ -1903,14 +1819,14 @@
             "60145/10"
           ],
           "variantSkuCount": 2,
-          "total": 4235,
+          "total": 4236,
           "months": {
             "2026-01": 724,
             "2026-02": 1029,
             "2026-03": 564,
             "2026-04": 495,
             "2026-05": 624,
-            "2026-06": 799
+            "2026-06": 800
           }
         },
         {
@@ -2049,54 +1965,6 @@
             "2026-05": 3,
             "2026-06": 1
           }
-        },
-        {
-          "baseSku": "90165",
-          "variantSkus": [
-            "90165/02"
-          ],
-          "variantSkuCount": 1,
-          "total": 335,
-          "months": {
-            "2026-01": 18,
-            "2026-02": 19,
-            "2026-03": 28,
-            "2026-04": 23,
-            "2026-05": 144,
-            "2026-06": 103
-          }
-        },
-        {
-          "baseSku": "52901",
-          "variantSkus": [
-            "52901/03"
-          ],
-          "variantSkuCount": 1,
-          "total": 164,
-          "months": {
-            "2026-01": 0,
-            "2026-02": 0,
-            "2026-03": 0,
-            "2026-04": 43,
-            "2026-05": 64,
-            "2026-06": 57
-          }
-        },
-        {
-          "baseSku": "11317",
-          "variantSkus": [
-            "11317/03"
-          ],
-          "variantSkuCount": 1,
-          "total": 65,
-          "months": {
-            "2026-01": 0,
-            "2026-02": 0,
-            "2026-03": 0,
-            "2026-04": 65,
-            "2026-05": 0,
-            "2026-06": 0
-          }
         }
       ],
       "skus": [
@@ -2110,9 +1978,9 @@
             "2026-03": 381,
             "2026-04": 364,
             "2026-05": 469,
-            "2026-06": 553
+            "2026-06": 554
           },
-          "total": 2552
+          "total": 2553
         },
         {
           "sku": "63601/05",
@@ -2365,48 +2233,6 @@
             "2026-06": 55
           },
           "total": 353
-        },
-        {
-          "sku": "90165/02",
-          "title": "Houba na mytí a masáž obličeje - tyrkysová barva",
-          "baseSku": "90165",
-          "months": {
-            "2026-01": 18,
-            "2026-02": 19,
-            "2026-03": 28,
-            "2026-04": 23,
-            "2026-05": 144,
-            "2026-06": 103
-          },
-          "total": 335
-        },
-        {
-          "sku": "52901/03",
-          "title": "Intenzivní hydratační maska na obličej a krk Hyaluronová kyselina - 3 ks",
-          "baseSku": "52901",
-          "months": {
-            "2026-01": 0,
-            "2026-02": 0,
-            "2026-03": 0,
-            "2026-04": 43,
-            "2026-05": 64,
-            "2026-06": 57
-          },
-          "total": 164
-        },
-        {
-          "sku": "11317/03",
-          "title": "Čistící náplast na nos na černé tečky a akné 1ks - 3 ks",
-          "baseSku": "11317",
-          "months": {
-            "2026-01": 0,
-            "2026-02": 0,
-            "2026-03": 0,
-            "2026-04": 65,
-            "2026-05": 0,
-            "2026-06": 0
-          },
-          "total": 65
         }
       ]
     }
