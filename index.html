@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varianty produktů 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Eshop analytics / varianty SKU</p>
+        <h1>Webový report variant produktů za rok 2025</h1>
+        <p class="lede">
+          Přesná definice v tomto reportu: varianta je SKU končící ve tvaru
+          <code>/01</code>, <code>/02</code>, <code>/03</code> atd.
+        </p>
+      </div>
+      <div class="hero-note">
+        <div class="note-label">Zdroj</div>
+        <div class="note-value">ordering_sales_history.json / view complete</div>
+        <div class="note-subtle" id="generated-at">Načítám…</div>
+      </div>
+    </section>
+
+    <section class="summary-grid" id="summary-grid"></section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Měsíční vývoj</p>
+          <h2>Kolik variant se prodalo po měsících</h2>
+        </div>
+        <div class="chip">2025</div>
+      </div>
+      <div class="month-chart" id="month-chart"></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Měsíc</th>
+              <th>Variantní kusy</th>
+              <th>Všechny kusy</th>
+              <th>Podíl</th>
+              <th>Aktivní variantní SKU</th>
+            </tr>
+          </thead>
+          <tbody id="months-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="two-col">
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Nejprodávanější varianty</p>
+            <h2>Top variantní SKU</h2>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>SKU</th>
+                <th>Název</th>
+                <th>2025</th>
+              </tr>
+            </thead>
+            <tbody id="top-skus-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel accent-panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Koncentrace</p>
+            <h2>Kde se to celé točí</h2>
+          </div>
+        </div>
+        <div class="stack" id="insights"></div>
+      </section>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Rozpad po produktu</p>
+          <h2>Základní SKU a jejich varianty</h2>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Základní SKU</th>
+              <th>Varianty</th>
+              <th>Počet variant</th>
+              <th>2025</th>
+            </tr>
+          </thead>
+          <tbody id="base-products-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Kompletní detail</p>
+          <h2>Všechna variantní SKU</h2>
+        </div>
+        <label class="search">
+          <span>Filtrovat</span>
+          <input id="sku-filter" type="search" placeholder="SKU nebo název produktu">
+        </label>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>SKU</th>
+              <th>Název</th>
+              <th>Základ</th>
+              <th>2025</th>
+              <th>Peak měsíc</th>
+            </tr>
+          </thead>
+          <tbody id="all-skus-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
