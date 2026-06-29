@@ -17,9 +17,11 @@ function formatPct(value) {
   }).format(value) + " %";
 }
 
-function monthPeak(months, monthLabels) {
-  const [month, value] = Object.entries(months).sort((a, b) => b[1] - a[1])[0];
-  return [monthLabels[month] || month, value];
+function monthlyAverage(months) {
+  const values = Object.values(months);
+  if (!values.length) return 0;
+  const total = values.reduce((sum, value) => sum + value, 0);
+  return total / values.length;
 }
 
 function renderYearTabs(report, activeYear, onChange) {
@@ -122,7 +124,7 @@ function renderBaseProducts(baseProducts) {
   `).join("");
 }
 
-function renderSkuRows(skus, monthLabels, filter = "") {
+function renderSkuRows(skus, filter = "") {
   const needle = filter.trim().toLowerCase();
   const rows = skus.filter((row) => {
     if (!needle) return true;
@@ -130,14 +132,14 @@ function renderSkuRows(skus, monthLabels, filter = "") {
   });
 
   document.querySelector("#all-skus-body").innerHTML = rows.map((row) => {
-    const [peakMonth, peakValue] = monthPeak(row.months, monthLabels);
+    const averageValue = monthlyAverage(row.months);
     return `
       <tr>
         <td><strong>${row.sku}</strong></td>
         <td>${row.title || '<span class="muted">bez názvu</span>'}</td>
         <td>${row.baseSku}</td>
         <td>${formatInt(row.total)}</td>
-        <td>${peakMonth} / ${formatInt(peakValue)} ks</td>
+        <td>${formatInt(averageValue)} ks</td>
       </tr>
     `;
   }).join("");
@@ -152,7 +154,6 @@ function updateYearLabels(year) {
 
 function renderYear(report, activeYear) {
   const yearReport = report.annual.find((item) => item.year === activeYear) || report.annual[0];
-  const monthLabels = report.monthLabels || {};
   const filterValue = document.querySelector("#sku-filter").value;
 
   updateYearLabels(yearReport.year);
@@ -161,7 +162,7 @@ function renderYear(report, activeYear) {
   renderTopSkus(yearReport.topSkus);
   renderInsights(yearReport);
   renderBaseProducts(yearReport.baseProducts);
-  renderSkuRows(yearReport.skus, monthLabels, filterValue);
+  renderSkuRows(yearReport.skus, filterValue);
 }
 
 async function init() {
