@@ -54,6 +54,7 @@
       "year": 2025,
       "summary": {
         "variantUnits": 56084,
+        "equivalentUnits": 323645,
         "allUnits": 1791359,
         "sharePct": 3.13,
         "skuCount": 39,
@@ -1704,6 +1705,7 @@
       "year": 2026,
       "summary": {
         "variantUnits": 20613,
+        "equivalentUnits": 116998,
         "allUnits": 741597,
         "sharePct": 2.78,
         "skuCount": 19,

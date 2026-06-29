@@ -17,6 +17,14 @@ function formatPct(value) {
   }).format(value) + " %";
 }
 
+function formatCurrency(value) {
+  return new Intl.NumberFormat("cs-CZ", {
+    style: "currency",
+    currency: "CZK",
+    maximumFractionDigits: 0,
+  }).format(value);
+}
+
 function monthlyAverage(months) {
   const values = Object.values(months);
   if (!values.length) return 0;
@@ -44,6 +52,7 @@ function renderSummary(summary, year) {
     ["Podíl na všech kusech", formatPct(summary.sharePct), "Jak velká část prodejů byla variantní SKU."],
     ["Aktivní variantní SKU", formatInt(summary.skuCount), `Počet SKU, která měla v roce ${year} prodej.`],
     ["Základní produkty", formatInt(summary.baseCount), "Kolik základních kódů mělo aspoň jednu prodanou variantu."],
+    ["Expedice za ks základu", formatCurrency((summary.equivalentUnits || 0) * 3), "Přepočet ks základu × 3 Kč za expedovaný kus."],
   ];
 
   grid.innerHTML = items.map(([label, value, foot]) => `
@@ -85,6 +94,7 @@ function renderTopSkus(topSkus) {
       <td>${row.title || '<span class="muted">bez názvu</span>'}</td>
       <td>${formatInt(row.total)}</td>
       <td>${formatInt(row.equivalentTotal)}</td>
+      <td>${formatCurrency(row.equivalentTotal * 3)}</td>
     </tr>
   `).join("");
 }
@@ -128,6 +138,7 @@ function renderBaseProducts(baseProducts) {
       <td>${formatInt(row.variantSkuCount)}</td>
       <td>${formatInt(row.total)}</td>
       <td>${formatInt(row.equivalentTotal)}</td>
+      <td>${formatCurrency(row.equivalentTotal * 3)}</td>
     </tr>
   `).join("");
 }
@@ -148,8 +159,10 @@ function renderSkuRows(skus, filter = "") {
         <td>${row.title || '<span class="muted">bez názvu</span>'}</td>
         <td>${row.baseSku}</td>
         <td>${formatInt(row.total)}</td>
+        <td>${formatInt(row.equivalentTotal)} ks</td>
         <td>${formatInt(averageValue)} ks</td>
         <td>${formatInt(equivalentAverageValue)} ks</td>
+        <td>${formatCurrency(row.equivalentTotal * 3)}</td>
       </tr>
     `;
   }).join("");
