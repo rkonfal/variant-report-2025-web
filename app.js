@@ -91,6 +91,12 @@ function renderTopSkus(topSkus) {
 function renderInsights(yearReport) {
   const sortedMonths = [...yearReport.months].sort((a, b) => b.variantUnits - a.variantUnits);
   const topMonth = sortedMonths[0];
+  const averageMonthUnits = monthlyAverage(
+    Object.fromEntries(yearReport.months.map((row) => [row.label, row.variantUnits]))
+  );
+  const averageMonthShare = monthlyAverage(
+    Object.fromEntries(yearReport.months.map((row) => [row.label, row.sharePct]))
+  );
   const topSku = yearReport.topSkus[0];
   const concentration = yearReport.summary.variantUnits
     ? (topSku.total / yearReport.summary.variantUnits) * 100
@@ -99,8 +105,8 @@ function renderInsights(yearReport) {
 
   document.querySelector("#insights").innerHTML = `
     <article class="insight">
-      <strong>Peak měsíc byl ${topMonth.label}</strong>
-      <div>Prodalo se ${formatInt(topMonth.variantUnits)} variantních kusů, tedy ${formatPct(topMonth.sharePct)} ze všech kusů v měsíci.</div>
+      <strong>Průměrný měsíc v roce ${yearReport.year}</strong>
+      <div>Prodalo se ${formatInt(averageMonthUnits)} variantních kusů měsíčně, tedy v průměru ${formatPct(averageMonthShare)} ze všech měsíčních kusů.</div>
     </article>
     <article class="insight">
       <strong>Největší tahoun: ${topSku.sku}</strong>
@@ -108,7 +114,7 @@ function renderInsights(yearReport) {
     </article>
     <article class="insight">
       <strong>Nejsilnější základní produkt: ${topBase.baseSku}</strong>
-      <div>${formatInt(topBase.total)} ks přes ${formatInt(topBase.variantSkuCount)} variantní SKU.</div>
+      <div>${formatInt(topBase.total)} ks přes ${formatInt(topBase.variantSkuCount)} variantní SKU. Nejsilnější měsíc zůstal ${topMonth.label} s ${formatInt(topMonth.variantUnits)} ks.</div>
     </article>
   `;
 }
